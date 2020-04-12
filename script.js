@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   var mainInterval = setInterval(goForward, 5000);
 
   function goForward() {
@@ -45,20 +45,23 @@ $(document).ready(function() {
 
   /*kiedykolwiek li od parenta (nie od childa) jest hoverowany... */
   $("ul.parent > li").hover(
-    function() {
+    function () {
       $(this) /*this jest tutaj */
         .find("ul.child")
         .show(100);
     },
-    function() {
-      $(this)
-        .find("ul.child")
-        .hide(300);
+    function () {
+      $(this).find("ul.child").hide(300);
     }
   );
 
-  $("#slajder").on("click", function() {
-    $(".slider-outer").fadeIn("slow");
+  $("#slajder").on("click", function () {
+    $(".visible").removeClass("visible").css("display", "none");
+    $(".slider-outer").fadeIn("slow").addClass("visible");
+  });
+
+  $("#todo").on("click", function () {
+    $(".visible").removeClass("visible").css("display", "none");
   });
 });
 
