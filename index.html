@@ -1,12 +1,63 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <meta charset="utf-8">
     <title>Moja strona WWW</title>
 
-    
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+    <script src="script.js"></script>
   </head>
-  <body>
-    <h1> Hello World! </h1>
+  <body style="background-color:#14a6c7 ;background-size: 1920px 1080px">
+    <canvas data-processing-sources="rectangles.pde"></canvas>
+    <span style="text-align:center ; font-weight: bold; color:black">
+      <div id="container">
+        <div id="header" class="top">
+          STRONA ZE ZDJĘCIAMI ZUZANKI
+        </div>
+
+        <nav id="navigationBar" class="top">
+          <ul class="parent">
+            <li>
+              animacje
+              <ul class="child">
+                <li id="slajder">slajder</li>
+                <li>item 1.1</li>
+                <li>item 1.2</li>
+              </ul>
+            </li>
+            <li class="samaGora">
+              item 2
+              <ul class="child">
+                <li>item 2.1</li>
+                <li>item 2.1</li>
+                <li>item 2.2</li>
+              </ul>
+            </li>
+            <li>item 3</li>
+            <li>item 4</li>
+          </ul>
+        </nav>
+
+        <div class="slider-outer">
+          <img src="images/arrow-left.png" class="prev" alt="Prev" />
+          <div class="slider-inner">
+            <img src="images/image1.jpg" id="first" class="active" />
+            <img src="images/image2.jpg" />
+            <img src="images/image3.jpg" />
+            <img src="images/image4.jpg" />
+            <img src="images/image5.jpg" />
+            <img src="images/image6.jpg" id="last" />
+          </div>
+          <img src="images/arrow-right.png" class="next" alt="Next" />
+        </div>
+
+        <div
+          id="stopka"
+          style="text-align: left ; background-color:#09819c; margin-top: 60px ;position: absolute; width: 99%; bottom: 0;"
+        ></div>
+      </div>
+    </span>
   </body>
-  </html>
+</html>

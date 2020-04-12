@@ -1,0 +1,104 @@
+.top {
+  font-size: 40px;
+  background-color: #09819c;
+  width: auto;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+#container {
+  box-sizing: border-box;
+}
+
+.slider-outer {
+  width: 1000px;
+  height: 600px;
+  margin: auto;
+  display: none;
+}
+
+.slider-inner {
+  width: 900px;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  padding: 3px;
+  border: #666 solid 1px;
+}
+
+.slider-inner img {
+  display: none;
+  width: 900px;
+  height: 600px;
+}
+
+.slider-inner img.active {
+  display: inline-block;
+}
+.prev,
+.next {
+  float: left;
+  margin-top: 280px;
+  cursor: pointer;
+}
+
+.prev {
+  position: relative;
+  margin-right: -45px;
+  z-index: 100;
+}
+
+.next {
+  position: relative;
+  margin-left: -45px;
+  z-index: 100;
+}
+
+.parent {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.child {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  list-style: none;
+}
+
+ul.child {
+  display: none;
+  margin-top: 2px;
+  background: #09819c;
+}
+ul.child > li {
+  border-top: 1px solid #14a6c7;
+}
+
+ul.parent > li {
+  float: left;
+  width: 25%;
+  cursor: pointer;
+  z-index: 20;
+}
+ul.parent > li:hover {
+  background: #014b5c;
+}
+
+ul.child > li:hover {
+  background: #035e72;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+}
