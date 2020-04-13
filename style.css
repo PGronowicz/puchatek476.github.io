@@ -129,3 +129,6 @@ canvas {
   margin-right: 22px;
   margin-top: 2px;
 }
+#addTaskBut:hover {
+  cursor: pointer;
+}

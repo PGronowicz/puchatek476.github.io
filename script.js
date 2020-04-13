@@ -66,6 +66,12 @@ $(document).ready(function () {
     $(".visible").removeClass("visible").css("display", "none");
     $("#to-do-list").fadeIn("slow").addClass("visible");
   });
+
+  $("#addTaskBut").on("click", function () {
+    var div = "<div class='to-do-block uncompleted'>Wpisz coś tutaj</div>";
+    var $complSection = $("#completed");
+    $complSection.prepend(div);
+  });
 });
 
 //kod z biblioteki p5.js
