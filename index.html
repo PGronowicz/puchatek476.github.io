@@ -2,8 +2,12 @@
 <html>
   <head>
     <title>Moja strona WWW</title>
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/fontello.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
@@ -51,6 +55,17 @@
             <img src="images/image6.jpg" id="last" />
           </div>
           <img src="images/arrow-right.png" class="next" alt="Next" />
+        </div>
+
+        <div id="to-do-list">
+          <div id="add-task" class="to-do-block">
+            Add task
+            <div id="addTaskBut">
+              <i class="demo-icon icon-plus"></i>
+            </div>
+          </div>
+          <div id="to-do" class="to-do-block">To do:</div>
+          <div id="completed" class="to-do-block">Completed:</div>
         </div>
 
         <div

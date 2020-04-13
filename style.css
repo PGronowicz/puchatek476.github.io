@@ -102,3 +102,30 @@ canvas {
   height: 100%;
   z-index: -100;
 }
+
+#to-do-list {
+  width: 800px;
+  height: 600px;
+  margin: auto;
+  display: none;
+}
+
+.to-do-block {
+  width: 100%;
+  height: 35px;
+  margin-bottom: 11px;
+  background-color: #02586b;
+  border-radius: 10px;
+  font-family: "Baloo Paaji 2", cursive;
+  font-size: 28px;
+  text-align: left;
+  padding-left: 7px;
+  padding-bottom: 7px;
+}
+#addTaskBut {
+  float: right;
+  width: 25px;
+  height: 25px;
+  margin-right: 22px;
+  margin-top: 2px;
+}

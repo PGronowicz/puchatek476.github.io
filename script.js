@@ -1,6 +1,7 @@
 $(document).ready(function () {
   var mainInterval = setInterval(goForward, 5000);
 
+  //funkcje slajdera
   function goForward() {
     var currIMG = $(".active");
     var nextIMG = currIMG.next();
@@ -40,6 +41,7 @@ $(document).ready(function () {
 
   $(".prev").on("click", goBackward);
 
+  //stopka
   var today = new Date();
   $("#stopka").text(today);
 
@@ -62,9 +64,11 @@ $(document).ready(function () {
 
   $("#todo").on("click", function () {
     $(".visible").removeClass("visible").css("display", "none");
+    $("#to-do-list").fadeIn("slow").addClass("visible");
   });
 });
 
+//kod z biblioteki p5.js
 class Bubble {
   constructor() {
     this.x = random(0, width);
