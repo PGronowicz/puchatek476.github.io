@@ -18,7 +18,7 @@ $(document).ready(function () {
       nextIMG.addClass("active").css("z-index", 10);
     }
   }
-
+  //<i class="demo-icon icon-plus"></i>
   function goBackward() {
     var currIMG = $(".active");
     var prevIMG = currIMG.prev();
@@ -64,14 +64,22 @@ $(document).ready(function () {
 
   $("#todo").on("click", function () {
     $(".visible").removeClass("visible").css("display", "none");
-    $("#to-do-list").fadeIn("slow").addClass("visible");
+    $("#listContainer").fadeIn("slow").addClass("visible");
   });
 
-  $("#addTaskBut").on("click", function () {
-    var div = "<div class='to-do-block uncompleted'>Wpisz coś tutaj</div>";
-    var $complSection = $("#completed");
-    $complSection.prepend(div);
+  $(".icon-plus").on("click", function () {
+    if (!$("#taskInput").val()) {
+      var task = $("<div class='listRectStyle'></div>").text(
+        $("#taskInput").val()
+      );
+      $("#DoneHeader").prepend(task);
+      $("#taskInput").val("");
+    }
   });
+
+  $("#DoneHeader").prepend(
+    $("<div class='listRectStyle'></div>").text("siema")
+  );
 });
 
 //kod z biblioteki p5.js
