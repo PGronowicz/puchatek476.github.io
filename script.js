@@ -68,11 +68,23 @@ $(document).ready(function () {
   });
 
   $(".icon-plus").on("click", function () {
-    var task = $("<div class='listRectStyle'></div>").text(
-      $("#taskInput").val()
-    );
-    $("#DoneHeader").prepend(task);
+    var taskText = "<p>" + $("#taskInput").val() + "</p>";
+    var task = $("<div class='listStyle'></div>")
+      .html(taskText)
+      .append("<i class='demo-icon icon-ok'></i>")
+      .append("<i class='demo-icon icon-trash'></i>");
+    $("#ToDoContainer").append(task);
     $("#taskInput").val("");
+  });
+
+  $("#ToDoContainer").on("click", ".icon-ok", function () {
+    var remembered = $(this).parent().clone();
+    $(this).parent().css("display", "none");
+    $("#DoneContainer").append(remembered);
+  });
+
+  $("#listContainer").on("click", ".icon-trash", function () {
+    $(this).parent().css("display", "none");
   });
 });
 

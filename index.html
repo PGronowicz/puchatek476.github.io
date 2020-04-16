@@ -6,7 +6,7 @@
       href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/fontello.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -58,13 +58,17 @@
         </div>
 
         <div id="listContainer">
-          <div id="addTask" class="listRectStyle">
+          <div id="addTask" class="headerStyle">
             <p>Add task</p>
             <input type="text" id="taskInput" />
             <i class="demo-icon icon-plus"></i>
           </div>
-          <div id="ToDoHeader" class="listRectStyle"><p>To do:</p></div>
-          <div id="DoneHeader" class="listRectStyle"><p>Done:</p></div>
+          <div id="ToDoContainer">
+            <div class="headerStyle"><p>To do:</p></div>
+          </div>
+          <div id="DoneContainer">
+            <div class="headerStyle"><p>Done:</p></div>
+          </div>
         </div>
 
         <div
