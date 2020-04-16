@@ -1,6 +1,7 @@
 $(document).ready(function () {
   var mainInterval = setInterval(goForward, 5000);
 
+  //GRO REVIEW: make code comments also in english
   //funkcje slajdera
   function goForward() {
     var currIMG = $(".active");
@@ -41,14 +42,17 @@ $(document).ready(function () {
 
   $(".prev").on("click", goBackward);
 
+  //GRO REVIEW: make code comments also in english
   //stopka
   var today = new Date();
   $("#stopka").text(today);
-
+   
+  //GRO REVIEW: make code comments also in english
   /*kiedykolwiek li od parenta (nie od childa) jest hoverowany... */
   $("ul.parent > li").hover(
     function () {
-      $(this) /*this jest tutaj */
+      //GRO REVIEW: make code comments also in english
+        $(this) /*this jest tutaj */
         .find("ul.child")
         .show(100);
     },
@@ -57,6 +61,7 @@ $(document).ready(function () {
     }
   );
 
+  //GRO REVIEW: make ids and css classes in english, adjust here when you change your index.html
   $("#slajder").on("click", function () {
     $(".visible").removeClass("visible").css("display", "none");
     $(".slider-outer").fadeIn("slow").addClass("visible");
@@ -88,6 +93,7 @@ $(document).ready(function () {
   });
 });
 
+//GRO REVIEW: make code comments also in english
 //kod z biblioteki p5.js
 class Bubble {
   constructor() {
