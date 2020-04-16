@@ -68,18 +68,12 @@ $(document).ready(function () {
   });
 
   $(".icon-plus").on("click", function () {
-    if (!$("#taskInput").val()) {
-      var task = $("<div class='listRectStyle'></div>").text(
-        $("#taskInput").val()
-      );
-      $("#DoneHeader").prepend(task);
-      $("#taskInput").val("");
-    }
+    var task = $("<div class='listRectStyle'></div>").text(
+      $("#taskInput").val()
+    );
+    $("#DoneHeader").prepend(task);
+    $("#taskInput").val("");
   });
-
-  $("#DoneHeader").prepend(
-    $("<div class='listRectStyle'></div>").text("siema")
-  );
 });
 
 //kod z biblioteki p5.js
@@ -104,7 +98,7 @@ var bubbles = [];
 function setup() {
   let canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent("container");
-  for (var i = 0; i < 100; i++) {
+  for (var i = 0; i < 20; i++) {
     bubbles[i] = new Bubble();
   }
 }
